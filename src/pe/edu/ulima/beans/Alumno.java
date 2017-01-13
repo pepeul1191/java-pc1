@@ -18,31 +18,12 @@ public class Alumno {
     private Date nacimiento;
 
     public Alumno(int codigo, String nombres, String apellidoPaterno, String apellidoMaterno, String dni, String nacimiento) {
-        try {
-            DateFormat format = new SimpleDateFormat("MMMM d, yyyy", Locale.ENGLISH);
-            
-            this.codigo = codigo;
-            this.nombres = nombres;
-            this.apellidoPaterno = apellidoPaterno;
-            this.apellidoMaterno = apellidoMaterno;
-            this.dni = dni;
-            this.nacimiento = format.parse(nacimiento);
-        } catch (ParseException ex) {
-            Logger.getLogger(Alumno.class.getName()).log(Level.SEVERE, null, ex);
-        }
+
     }
 
     @Override
     public String toString() {
-        Calendar calendario = Calendar.getInstance();
-        calendario.setTime(nacimiento);
-        
-        int dia = calendario.get(Calendar.DATE);
-        int mes = calendario.get(Calendar.MONTH) + 1 ;
-        int anio = calendario.get(Calendar.YEAR);
-        String nacimiento = dia + "/" + mes + "/" + anio;
-        
-        return "Alumno{" + "codigo=" + codigo + ", nombres=" + nombres + ", apellidoPaterno=" + apellidoPaterno + ", apellidoMaterno=" + apellidoMaterno + ", dni=" + dni + ", nacimiento=" + nacimiento + '}';
+
     }
 
     public Date getNacimiento() {
