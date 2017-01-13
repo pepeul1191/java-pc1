@@ -3,6 +3,11 @@ package pe.edu.ulima.gestion;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -63,5 +68,53 @@ public class Gestion {
         System.out.println(a);
         alumnos[indice] = a;
         indice++;
+    }
+    
+    public Alumno menor(){
+        DateFormat format = new SimpleDateFormat("MMMM d, yyyy", Locale.ENGLISH);
+        Alumno alumnoMenor = null;
+        String string = "July 22, 1900";
+        Date dateMenor = null;
+        
+        try {
+            dateMenor = format.parse(string);
+        } catch (ParseException ex) {
+            Logger.getLogger(Gestion.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        for(Alumno a : alumnos){
+            if(a != null){
+                if(a.getNacimiento().after(dateMenor)){
+                    dateMenor = a.getNacimiento();
+                    alumnoMenor = a;
+                }
+            }
+        }
+        
+        return alumnoMenor;
+    }
+    
+    public Alumno mayor(){
+        DateFormat format = new SimpleDateFormat("MMMM d, yyyy", Locale.ENGLISH);
+        Alumno alumnoMayor = null;
+        String string = "July 22, 2050";
+        Date dateMayor = null;
+        
+        try {
+            dateMayor = format.parse(string);
+        } catch (ParseException ex) {
+            Logger.getLogger(Gestion.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        for(Alumno a : alumnos){
+            if(a != null){
+                if(a.getNacimiento().before(dateMayor)){
+                    dateMayor = a.getNacimiento();
+                    alumnoMayor = a;
+                }
+            }
+        }
+        
+        return alumnoMayor;
     }
 }

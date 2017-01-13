@@ -44,8 +44,8 @@ public class Alumno {
         
         return "Alumno{" + "codigo=" + codigo + ", nombres=" + nombres + ", apellidoPaterno=" + apellidoPaterno + ", apellidoMaterno=" + apellidoMaterno + ", dni=" + dni + ", nacimiento=" + nacimiento + '}';
     }
-    
-    
-    
 
+    public Date getNacimiento() {
+        return nacimiento;
+    }
 }
