@@ -42,4 +42,26 @@ public class Gestion {
     public Alumno[] lista(){
         return alumnos;
     }
+    
+    public void agregarAlumno(){
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("Código : ");
+        int codigo = Integer.parseInt(sc.nextLine());
+        System.out.println("Nombres : ");
+        String nombres = sc.nextLine();
+        System.out.println("Apellido Paterno : ");
+        String apellidoPaterno = sc.nextLine();
+        System.out.println("Apellido Materno: ");
+        String apellidoMaterno = sc.nextLine(); 
+        System.out.println("DNI : ");
+        String dni = sc.nextLine();
+        System.out.println("Fecha de Nacimiento : ");
+        String nacimiento = sc.nextLine();
+        
+        Alumno a = new Alumno(codigo, nombres, apellidoPaterno, apellidoMaterno, dni, nacimiento);
+        System.out.println(a);
+        alumnos[indice] = a;
+        indice++;
+    }
 }

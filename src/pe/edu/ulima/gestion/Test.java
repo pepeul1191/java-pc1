@@ -18,9 +18,15 @@ public class Test {
             }
         }
         
-        Alumno a = new Alumno("");
+        g.agregarAlumno();
         
+        Alumno[] lista2 = g.lista();
         
+        for(Alumno a : lista2){
+            if(a != null){
+                System.out.println(a);
+            }
+        }
     }
     
 }
