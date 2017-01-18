@@ -8,11 +8,9 @@ public class Test {
     public static void main(String[] args) {
         Gestion g = new Gestion();
         
-        //Pregunta 1 : Cargar el arreglo "alumnos" de la clase Gestion con el archivo de texto
+        //Pregunta 1
         
         g.cargar("C:\\Documentos\\PP\\java-pc1solucion\\src\\pe\\edu\\ulima\\gestion\\data.txt");
-        
-        //Pregunta 2 : Mostrar la lista de los alumnos, mostrando la fecha de nacimiento en el formato dd/mm/yyyy
         
         Alumno[] lista = g.lista();
         
@@ -22,11 +20,9 @@ public class Test {
             }
         }
         
-        //Pregunta 3 : Agregar un nuevo alumno mediante input scanner
+        //Pregunta 2
         
         g.agregarAlumno();
-        
-        //Pregunta 4 : Mostrar la lista actualizada de los alumnos, mostrando la fecha de nacimiento en el formato dd/mm/yyyy
         
         Alumno[] lista2 = g.lista();
         
@@ -36,13 +32,13 @@ public class Test {
             }
         }
         
-        //Pregunta 5 : Mostrar el alumno de mayor edad
+        //Pregunta 3
         
         Alumno[] mayorYMenor = g.mayorYMenor();
         System.out.println("El mayor alumno es : " + mayorYMenor[1]);
         System.out.println("El menor alumno es : " + mayorYMenor[0]);
         
-        //Pregunta 6 : Cantidad de vocales presentes en el nombre completo
+        //Pregunta 4
         
         int[] vocalesCantidad = g.cantidadVocales();
         String[] vocalesValores = {"A", "E", "I", "O", "U"};

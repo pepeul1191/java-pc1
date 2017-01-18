@@ -109,7 +109,7 @@ public class Gestion {
         Date dateMayor = null;
         
         try {
-            dateMayor = format.parse(string);
+            dateMayor = format.parse(string); 
         } catch (ParseException ex) {
             Logger.getLogger(Gestion.class.getName()).log(Level.SEVERE, null, ex);
         }
