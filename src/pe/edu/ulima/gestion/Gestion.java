@@ -70,6 +70,14 @@ public class Gestion {
         indice++;
     }
     
+    public Alumno[] mayorYMenor(){
+        Alumno[] rpta = new Alumno[2];
+        rpta[0] = this.menor();
+        rpta[1] = this.mayor();
+        
+        return rpta;
+    }
+    
     public Alumno menor(){
         DateFormat format = new SimpleDateFormat("MMMM d, yyyy", Locale.ENGLISH);
         Alumno alumnoMenor = null;
@@ -116,5 +124,46 @@ public class Gestion {
         }
         
         return alumnoMayor;
+    }
+    
+    public int[] cantidadVocales(){
+        int[] rpta = new int[5];
+        for(Alumno a : alumnos){
+            if(a != null){
+                String nombre = a.getNombres() + a.getApellidoPaterno() + a.getApellidoMaterno();
+                for(int k = 0; k < nombre.length(); k++){
+                    char caracter = nombre.charAt(k);
+                    switch(caracter) {
+                        case 'a' :
+                           int tA = rpta[0];
+                           tA = tA + 1;
+                           rpta[0] = tA;
+                           break;
+                        case 'e' :
+                           int tE = rpta[1];
+                           tE = tE + 1;
+                           rpta[1] = tE;
+                           break;
+                        case 'i' :
+                           int tI = rpta[2];
+                           tI = tI + 1;
+                           rpta[2] = tI;
+                           break;
+                        case 'o' :
+                           int tO = rpta[3];
+                           tO = tO + 1;
+                           rpta[3] = tO;
+                           break;
+                        case 'u' :
+                           int tU = rpta[4];
+                           tU = tU + 1;
+                           rpta[4] = tU;
+                           break;
+                     }
+                }
+            }
+        }
+        
+        return rpta;
     }
 }

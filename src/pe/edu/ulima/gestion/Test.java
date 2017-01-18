@@ -10,7 +10,7 @@ public class Test {
         
         //Pregunta 1 : Cargar el arreglo "alumnos" de la clase Gestion con el archivo de texto
         
-        g.cargar("C:\\Documentos\\NetBeansProjects\\PracticaCalificada1\\src\\pe\\edu\\ulima\\gestion\\data.txt");
+        g.cargar("C:\\Documentos\\PP\\java-pc1solucion\\src\\pe\\edu\\ulima\\gestion\\data.txt");
         
         //Pregunta 2 : Mostrar la lista de los alumnos, mostrando la fecha de nacimiento en el formato dd/mm/yyyy
         
@@ -38,13 +38,18 @@ public class Test {
         
         //Pregunta 5 : Mostrar el alumno de mayor edad
         
-        System.out.println("El mayor alumno es : ");
-        System.out.println(g.mayor());
+        Alumno[] mayorYMenor = g.mayorYMenor();
+        System.out.println("El mayor alumno es : " + mayorYMenor[1]);
+        System.out.println("El menor alumno es : " + mayorYMenor[0]);
         
-        //Pregunta 6 : Mostrar el alumno de menor edad
+        //Pregunta 6 : Cantidad de vocales presentes en el nombre completo
         
-        System.out.println("El menor alumno es : ");
-        System.out.println(g.menor());
+        int[] vocalesCantidad = g.cantidadVocales();
+        String[] vocalesValores = {"A", "E", "I", "O", "U"};
+        
+        for(int k = 0; k < vocalesCantidad.length; k++){
+            System.out.println("Vocal : " + vocalesValores[k] + " - Cantidad : " + vocalesCantidad[k]);
+        }
     }
     
 }
