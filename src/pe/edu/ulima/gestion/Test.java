@@ -38,13 +38,9 @@ public class Test {
         
         //Pregunta 5 : Mostrar el alumno de mayor edad
         
-        System.out.println("El mayor alumno es : ");
-        System.out.println(g.mayor());
-        
-        //Pregunta 6 : Mostrar el alumno de menor edad
-        
-        System.out.println("El menor alumno es : ");
-        System.out.println(g.menor());
+        Alumno[] mayorYMenor = g.mayorYMenor();
+        System.out.println("El mayor alumno es : " + mayorYMenor[1]);
+        System.out.println("El menor alumno es : " + mayorYMenor[0]);
     }
     
 }

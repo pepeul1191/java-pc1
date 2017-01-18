@@ -25,8 +25,8 @@ Mostrar la lista actualizada de los alumnos, mostrando la fecha de nacimiento en
 
 ### Pregunta 5 (5 puntos)
 
-Mostrar el alumno de mayor edad
+Mostrar el alumno de mayor edad y el alumno de menor edad.
 
 ### Pregunta 6 (5 puntos)
 
-Mostrar el alumno de menor edad
+Mostrar en una lista la cantidad de vocales presentes en el nombre completo de los alumnos registrados.
